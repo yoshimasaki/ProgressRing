@@ -5,6 +5,10 @@ public struct ProgressRing: View {
     
     @ObservedObject public var viewModel: ViewModel
     
+    public init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+    }
+    
     public var body: some View {
         ZStack {
             Circle()

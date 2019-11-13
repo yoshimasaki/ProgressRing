@@ -14,5 +14,7 @@ extension ProgressRing {
         @Published public var progress: Double = .zero
         @Published public var color: Color = .blue
         @Published public var ringWidth: CGFloat = 10.0
+        
+        public init() {}
     }
 }
