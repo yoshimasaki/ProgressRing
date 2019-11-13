@@ -11,6 +11,24 @@ ProgressRing made with SwiftUI
 Add this packages in Xcode.
 File -> Swift Packages -> Add Package Dependency…
 
+## How to use
+
+```
+struct ContentView: View {
+    
+    @ObservedObject var ringModel: ProgressRing.ViewModel = {
+        let m = ProgressRing.ViewModel()
+        m.progress = 0.8
+        m.ringWidth = 30.0
+        return m
+    }()
+    
+    var body: some View {
+        ProgressRing(viewModel: ringModel)
+    }
+}
+```
+
 ### Prerequisites
 
 Xcode 11 or later
