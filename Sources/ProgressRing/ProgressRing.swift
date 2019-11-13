@@ -1,9 +1,9 @@
 import SwiftUI
 
 @available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
-struct ProgressRing: View {
+public struct ProgressRing: View {
     
-    @ObservedObject var viewModel: ViewModel
+    public @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {
@@ -35,7 +35,7 @@ struct ProgressRing: View {
         return formatter
     }()
     
-    var percentageText: String {
+    private var percentageText: String {
         percentageFormatter.string(from: NSNumber(floatLiteral: self.viewModel.progress)) ?? "--%"
     }
 }
