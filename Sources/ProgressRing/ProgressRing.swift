@@ -3,9 +3,9 @@ import SwiftUI
 @available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 public struct ProgressRing: View {
     
-    public @ObservedObject var viewModel: ViewModel
+    @ObservedObject public var viewModel: ViewModel
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             Circle()
                 .stroke(viewModel.color, style: StrokeStyle(lineWidth: viewModel.ringWidth))

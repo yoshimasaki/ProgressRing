@@ -11,8 +11,8 @@ import SwiftUI
 extension ProgressRing {
     
     public final class ViewModel: ObservableObject {
-        @Published var progress: Double = .zero
-        @Published var color: Color = .blue
-        @Published var ringWidth: CGFloat = 10.0
+        @Published public var progress: Double = .zero
+        @Published public var color: Color = .blue
+        @Published public var ringWidth: CGFloat = 10.0
     }
 }
